@@ -1,0 +1,4601 @@
+{
+  "generated_utc": "2026-09-26T06:51:22Z",
+  "tool": "backend/deps_inventory.py (no network, reads Cargo.lock)",
+  "counts": {
+    "total": 631,
+    "crates_io": 609,
+    "git": 5,
+    "workspace": 17
+  },
+  "git_dependencies": [
+    {
+      "name": "libsignal-core",
+      "version": "0.1.0",
+      "url": "git+https://github.com/signalapp/libsignal?tag=v0.102.2#8fc2113bda042fc972a166a24b974b0d34155c6c"
+    },
+    {
+      "name": "libsignal-debug",
+      "version": "0.102.2",
+      "url": "git+https://github.com/signalapp/libsignal?tag=v0.102.2#8fc2113bda042fc972a166a24b974b0d34155c6c"
+    },
+    {
+      "name": "libsignal-protocol",
+      "version": "0.1.0",
+      "url": "git+https://github.com/signalapp/libsignal?tag=v0.102.2#8fc2113bda042fc972a166a24b974b0d34155c6c"
+    },
+    {
+      "name": "signal-crypto",
+      "version": "0.1.0",
+      "url": "git+https://github.com/signalapp/libsignal?tag=v0.102.2#8fc2113bda042fc972a166a24b974b0d34155c6c"
+    },
+    {
+      "name": "spqr",
+      "version": "1.5.3",
+      "url": "git+https://github.com/signalapp/SparsePostQuantumRatchet.git?tag=v1.5.3#fd320484dcec89004021e6fdc7481825f5f261fa"
+    }
+  ],
+  "workspace_crates": [
+    {
+      "name": "min-app",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-crypto",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-delivery",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-device",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-e2e",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-ffi",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-identity",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-net",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-protocol",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-recovery",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-relay",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-request",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-session",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-storage",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-test-vectors",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-tor",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-wire",
+      "license": "AGPL-3.0-only"
+    }
+  ],
+  "direct_dependencies": {
+    "min-wire": [],
+    "min-protocol": [
+      "min-identity",
+      "min-wire"
+    ],
+    "min-identity": [
+      "min-wire"
+    ],
+    "min-test-vectors": [
+      "min-identity",
+      "min-protocol",
+      "min-wire"
+    ],
+    "min-relay": [
+      "min-net",
+      "min-protocol",
+      "min-wire"
+    ],
+    "min-request": [
+      "min-identity",
+      "min-protocol",
+      "min-wire"
+    ],
+    "min-crypto": [],
+    "min-ffi": [
+      "min-app",
+      "min-crypto",
+      "min-delivery",
+      "min-device",
+      "min-identity",
+      "min-net",
+      "min-protocol",
+      "min-recovery",
+      "min-relay",
+      "min-session",
+      "min-storage",
+      "min-tor"
+    ],
+    "min-e2e": [
+      "min-crypto",
+      "min-relay"
+    ],
+    "min-session": [
+      "min-identity",
+      "min-protocol",
+      "min-wire"
+    ],
+    "min-net": [
+      "min-wire"
+    ],
+    "min-tor": [
+      "min-delivery",
+      "min-net"
+    ],
+    "min-delivery": [
+      "min-net",
+      "min-protocol",
+      "min-relay"
+    ],
+    "min-storage": [
+      "min-crypto"
+    ],
+    "min-recovery": [],
+    "min-device": [],
+    "min-app": [
+      "min-delivery",
+      "min-identity",
+      "min-protocol",
+      "min-relay",
+      "min-request",
+      "min-session",
+      "min-storage"
+    ]
+  },
+  "packages": [
+    {
+      "name": "adler2",
+      "version": "2.0.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "aead",
+      "version": "0.3.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "aead",
+      "version": "0.6.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "aes",
+      "version": "0.9.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "aes-gcm-siv",
+      "version": "0.12.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "aho-corasick",
+      "version": "1.1.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "amplify",
+      "version": "4.9.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "amplify_derive",
+      "version": "4.0.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "amplify_num",
+      "version": "0.5.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "amplify_syn",
+      "version": "2.0.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "android_system_properties",
+      "version": "0.1.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "anyhow",
+      "version": "1.0.104",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "arbitrary",
+      "version": "1.4.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "argon2",
+      "version": "0.5.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "arrayvec",
+      "version": "0.7.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "arti-client",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ascii",
+      "version": "1.1.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "asn1-rs",
+      "version": "0.7.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "asn1-rs-derive",
+      "version": "0.6.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "asn1-rs-impl",
+      "version": "0.2.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "assert_matches",
+      "version": "1.5.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "async-compression",
+      "version": "0.4.46",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "async-native-tls",
+      "version": "0.6.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "async-trait",
+      "version": "0.1.92",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "async_executors",
+      "version": "0.7.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "asynchronous-codec",
+      "version": "0.7.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "atomic",
+      "version": "0.5.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "atomic",
+      "version": "0.6.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "atomic-waker",
+      "version": "1.1.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "autocfg",
+      "version": "1.5.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "axum",
+      "version": "0.7.9",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "axum-core",
+      "version": "0.4.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "base16ct",
+      "version": "0.2.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "base64",
+      "version": "0.23.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "base64ct",
+      "version": "1.8.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "bincode",
+      "version": "2.0.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "bindgen",
+      "version": "0.72.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "bitflags",
+      "version": "1.3.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "bitflags",
+      "version": "2.13.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "bitvec",
+      "version": "1.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "blake2",
+      "version": "0.10.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "blake3",
+      "version": "1.8.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "blanket",
+      "version": "0.3.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "block-buffer",
+      "version": "0.10.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "block-buffer",
+      "version": "0.12.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "block-padding",
+      "version": "0.4.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "bs58",
+      "version": "0.5.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "bstr",
+      "version": "1.13.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "bumpalo",
+      "version": "3.20.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "by_address",
+      "version": "1.2.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "bytemuck",
+      "version": "1.25.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "byteorder",
+      "version": "1.5.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "bytes",
+      "version": "1.12.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "caret",
+      "version": "0.10.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "cbc",
+      "version": "0.2.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "cc",
+      "version": "1.4.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "cexpr",
+      "version": "0.6.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "chacha20",
+      "version": "0.6.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "chacha20",
+      "version": "0.10.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "chacha20poly1305",
+      "version": "0.7.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "chrono",
+      "version": "0.4.45",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ciborium",
+      "version": "0.2.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ciborium-io",
+      "version": "0.2.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ciborium-ll",
+      "version": "0.2.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "cipher",
+      "version": "0.2.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "cipher",
+      "version": "0.4.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "cipher",
+      "version": "0.5.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "clang-sys",
+      "version": "1.9.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "cmov",
+      "version": "0.5.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "coarsetime",
+      "version": "0.1.37",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "compression-codecs",
+      "version": "0.4.41",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "compression-core",
+      "version": "0.4.33",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "const-oid",
+      "version": "0.9.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "const-oid",
+      "version": "0.10.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "const-str",
+      "version": "1.1.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "constant_time_eq",
+      "version": "0.4.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "convert_case",
+      "version": "0.10.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "cookie-factory",
+      "version": "0.3.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "core-foundation",
+      "version": "0.10.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "core-foundation-sys",
+      "version": "0.8.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "core-models",
+      "version": "0.0.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "cpubits",
+      "version": "0.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "cpufeatures",
+      "version": "0.2.17",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "cpufeatures",
+      "version": "0.3.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "cpuid-bool",
+      "version": "0.2.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "crabgrind",
+      "version": "0.2.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "crc32fast",
+      "version": "1.5.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "crossbeam-deque",
+      "version": "0.8.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "crossbeam-epoch",
+      "version": "0.9.21",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "crossbeam-queue",
+      "version": "0.3.14",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "crossbeam-utils",
+      "version": "0.8.23",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "crunchy",
+      "version": "0.2.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "crypto-bigint",
+      "version": "0.5.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "crypto-common",
+      "version": "0.1.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "crypto-common",
+      "version": "0.2.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ctr",
+      "version": "0.10.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ctutils",
+      "version": "0.4.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "curve25519-dalek",
+      "version": "4.1.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "curve25519-dalek",
+      "version": "5.0.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "curve25519-dalek-derive",
+      "version": "0.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "darling",
+      "version": "0.14.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "darling",
+      "version": "0.21.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "darling",
+      "version": "0.24.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "darling_core",
+      "version": "0.14.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "darling_core",
+      "version": "0.21.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "darling_core",
+      "version": "0.24.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "darling_macro",
+      "version": "0.14.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "darling_macro",
+      "version": "0.21.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "darling_macro",
+      "version": "0.24.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "data-encoding",
+      "version": "2.11.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "data-encoding-macro",
+      "version": "0.1.21",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "data-encoding-macro-internal",
+      "version": "0.1.19",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "defmt",
+      "version": "1.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "defmt-macros",
+      "version": "1.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "defmt-parser",
+      "version": "1.0.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "der",
+      "version": "0.7.10",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "der-parser",
+      "version": "10.0.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "deranged",
+      "version": "0.5.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "derive-deftly",
+      "version": "1.11.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "derive-deftly-macros",
+      "version": "1.11.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "derive-where",
+      "version": "1.6.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "derive_arbitrary",
+      "version": "1.4.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "derive_builder_core_fork_arti",
+      "version": "0.11.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "derive_builder_fork_arti",
+      "version": "0.11.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "derive_builder_macro_fork_arti",
+      "version": "0.11.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "derive_more",
+      "version": "2.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "derive_more-impl",
+      "version": "2.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "digest",
+      "version": "0.10.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "digest",
+      "version": "0.11.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "directories",
+      "version": "6.0.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "dirs",
+      "version": "6.0.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "dirs-sys",
+      "version": "0.5.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "displaydoc",
+      "version": "0.2.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "downcast-rs",
+      "version": "2.0.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "dyn-clone",
+      "version": "1.0.20",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ecdsa",
+      "version": "0.16.9",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ed25519",
+      "version": "2.2.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ed25519-dalek",
+      "version": "2.2.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "educe",
+      "version": "0.4.23",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "either",
+      "version": "1.18.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "elliptic-curve",
+      "version": "0.13.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "enum-ordinalize",
+      "version": "3.1.15",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "enum_dispatch",
+      "version": "0.3.13",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "enumset",
+      "version": "1.1.14",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "enumset_derive",
+      "version": "0.15.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "equivalent",
+      "version": "1.0.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "errno",
+      "version": "0.3.14",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "event-listener",
+      "version": "5.4.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "extend",
+      "version": "1.2.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "fallible-iterator",
+      "version": "0.3.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "fallible-streaming-iterator",
+      "version": "0.1.9",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "fastrand",
+      "version": "2.5.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ff",
+      "version": "0.13.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "fiat-crypto",
+      "version": "0.2.9",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "fiat-crypto",
+      "version": "0.3.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "figment",
+      "version": "0.10.19",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "filetime",
+      "version": "0.2.29",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "find-msvc-tools",
+      "version": "0.1.12",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "fixedbitset",
+      "version": "0.5.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "flate2",
+      "version": "1.1.10",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "fluid-let",
+      "version": "1.0.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "fnv",
+      "version": "1.0.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "foldhash",
+      "version": "0.1.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "foreign-types",
+      "version": "0.3.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "foreign-types-shared",
+      "version": "0.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "form_urlencoded",
+      "version": "1.2.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "fs-mistrust",
+      "version": "0.15.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "fslock-guard",
+      "version": "0.8.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "funty",
+      "version": "2.0.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "futures",
+      "version": "0.3.34",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "futures-channel",
+      "version": "0.3.34",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "futures-core",
+      "version": "0.3.34",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "futures-executor",
+      "version": "0.3.34",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "futures-io",
+      "version": "0.3.34",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "futures-macro",
+      "version": "0.3.34",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "futures-sink",
+      "version": "0.3.34",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "futures-task",
+      "version": "0.3.34",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "futures-util",
+      "version": "0.3.34",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "generic-array",
+      "version": "0.14.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "getrandom",
+      "version": "0.2.17",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "getrandom",
+      "version": "0.3.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "getrandom",
+      "version": "0.4.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "getset",
+      "version": "0.1.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ghash",
+      "version": "0.6.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "glob",
+      "version": "0.3.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "glob-match",
+      "version": "0.2.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "group",
+      "version": "0.13.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "half",
+      "version": "2.7.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hashbrown",
+      "version": "0.12.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hashbrown",
+      "version": "0.15.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hashbrown",
+      "version": "0.16.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hashbrown",
+      "version": "0.17.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hashlink",
+      "version": "0.10.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hax-lib",
+      "version": "0.3.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hax-lib-macros",
+      "version": "0.3.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hax-lib-macros-types",
+      "version": "0.3.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "heck",
+      "version": "0.5.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hex",
+      "version": "0.4.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hkdf",
+      "version": "0.12.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hkdf",
+      "version": "0.13.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hmac",
+      "version": "0.12.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hmac",
+      "version": "0.13.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hostname-validator",
+      "version": "1.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hpke-rs",
+      "version": "0.7.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hpke-rs-crypto",
+      "version": "0.7.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "http",
+      "version": "1.5.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "http-body",
+      "version": "1.1.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "http-body-util",
+      "version": "0.1.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "httparse",
+      "version": "1.10.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "httpdate",
+      "version": "1.0.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "humantime",
+      "version": "2.4.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "humantime-serde",
+      "version": "1.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hybrid-array",
+      "version": "0.4.15",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hyper",
+      "version": "1.11.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "hyper-util",
+      "version": "0.1.20",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "iana-time-zone",
+      "version": "0.1.65",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "iana-time-zone-haiku",
+      "version": "0.1.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "icu_collections",
+      "version": "2.3.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "icu_locale_core",
+      "version": "2.3.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "icu_normalizer",
+      "version": "2.3.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "icu_normalizer_data",
+      "version": "2.3.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "icu_properties",
+      "version": "2.3.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "icu_properties_data",
+      "version": "2.3.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "icu_provider",
+      "version": "2.3.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ident_case",
+      "version": "1.0.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "idna",
+      "version": "1.1.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "idna_adapter",
+      "version": "1.2.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "imara-diff",
+      "version": "0.2.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "indexmap",
+      "version": "1.9.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "indexmap",
+      "version": "2.14.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "inotify",
+      "version": "0.11.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "inotify-sys",
+      "version": "0.1.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "inout",
+      "version": "0.1.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "inout",
+      "version": "0.2.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "inventory",
+      "version": "0.3.24",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ipnet",
+      "version": "2.12.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "iprange",
+      "version": "0.6.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "itertools",
+      "version": "0.13.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "itertools",
+      "version": "0.15.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "itoa",
+      "version": "1.0.18",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "jiff",
+      "version": "0.2.37",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "jiff-core",
+      "version": "0.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "jiff-static",
+      "version": "0.2.37",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "jiff-tzdb",
+      "version": "0.1.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "jiff-tzdb-platform",
+      "version": "0.1.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "jobserver",
+      "version": "0.1.35",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "js-sys",
+      "version": "0.3.105",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "keccak",
+      "version": "0.1.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "keccak",
+      "version": "0.2.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "kqueue",
+      "version": "1.2.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "kqueue-sys",
+      "version": "1.1.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "lazy_static",
+      "version": "1.5.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "libc",
+      "version": "0.2.189",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "libcrux-hacl-rs",
+      "version": "0.0.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "libcrux-hmac",
+      "version": "0.0.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "libcrux-intrinsics",
+      "version": "0.0.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "libcrux-macros",
+      "version": "0.0.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "libcrux-ml-kem",
+      "version": "0.0.10",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "libcrux-platform",
+      "version": "0.0.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "libcrux-secrets",
+      "version": "0.0.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "libcrux-sha2",
+      "version": "0.0.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "libcrux-sha3",
+      "version": "0.0.10",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "libcrux-traits",
+      "version": "0.0.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "libloading",
+      "version": "0.8.9",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "liblzma",
+      "version": "0.4.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "liblzma-sys",
+      "version": "0.4.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "libm",
+      "version": "0.2.16",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "libredox",
+      "version": "0.1.24",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "libsignal-core",
+      "version": "0.1.0",
+      "source": "git",
+      "source_url": "git+https://github.com/signalapp/libsignal?tag=v0.102.2#8fc2113bda042fc972a166a24b974b0d34155c6c",
+      "license": null
+    },
+    {
+      "name": "libsignal-debug",
+      "version": "0.102.2",
+      "source": "git",
+      "source_url": "git+https://github.com/signalapp/libsignal?tag=v0.102.2#8fc2113bda042fc972a166a24b974b0d34155c6c",
+      "license": null
+    },
+    {
+      "name": "libsignal-protocol",
+      "version": "0.1.0",
+      "source": "git",
+      "source_url": "git+https://github.com/signalapp/libsignal?tag=v0.102.2#8fc2113bda042fc972a166a24b974b0d34155c6c",
+      "license": null
+    },
+    {
+      "name": "libsqlite3-sys",
+      "version": "0.35.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "linux-raw-sys",
+      "version": "0.12.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "litemap",
+      "version": "0.8.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "lock_api",
+      "version": "0.4.14",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "log",
+      "version": "0.4.34",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "matchers",
+      "version": "0.2.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "matchit",
+      "version": "0.7.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "memchr",
+      "version": "2.8.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "memmap2",
+      "version": "0.9.11",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "merlin",
+      "version": "3.0.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "mime",
+      "version": "0.3.17",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "min-app",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-crypto",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-delivery",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-device",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-e2e",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-ffi",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-identity",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-net",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-protocol",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-recovery",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-relay",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-request",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-session",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-storage",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-test-vectors",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-tor",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "min-wire",
+      "version": "0.1.0",
+      "source": "workspace",
+      "source_url": null,
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "minimal-lexical",
+      "version": "0.2.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "miniz_oxide",
+      "version": "0.9.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "mio",
+      "version": "1.2.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "multimap",
+      "version": "0.10.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "native-tls",
+      "version": "0.2.18",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "nom",
+      "version": "7.1.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "nonany",
+      "version": "0.3.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "notify",
+      "version": "8.2.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "notify-types",
+      "version": "2.1.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ntapi",
+      "version": "0.4.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "nu-ansi-term",
+      "version": "0.50.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "num-bigint",
+      "version": "0.4.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "num-bigint-dig",
+      "version": "0.8.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "num-conv",
+      "version": "0.2.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "num-integer",
+      "version": "0.1.47",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "num-iter",
+      "version": "0.1.46",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "num-traits",
+      "version": "0.2.19",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "num_enum",
+      "version": "0.7.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "num_enum_derive",
+      "version": "0.7.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "objc2-core-foundation",
+      "version": "0.3.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "objc2-io-kit",
+      "version": "0.3.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "once_cell",
+      "version": "1.21.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "oneshot-fused-workaround",
+      "version": "0.7.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "openssl",
+      "version": "0.10.81",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "openssl-macros",
+      "version": "0.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "openssl-probe",
+      "version": "0.2.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "openssl-sys",
+      "version": "0.9.117",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "option-ext",
+      "version": "0.2.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ordered-float",
+      "version": "2.10.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "os_str_bytes",
+      "version": "6.6.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "p256",
+      "version": "0.13.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "p384",
+      "version": "0.13.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "p521",
+      "version": "0.13.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "parking",
+      "version": "2.2.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "parking_lot",
+      "version": "0.12.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "parking_lot_core",
+      "version": "0.9.12",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "password-hash",
+      "version": "0.5.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "paste",
+      "version": "1.0.15",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "pastey",
+      "version": "0.2.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "pem-rfc7468",
+      "version": "0.7.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "percent-encoding",
+      "version": "2.3.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "petgraph",
+      "version": "0.8.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "phf",
+      "version": "0.14.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "phf_generator",
+      "version": "0.14.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "phf_macros",
+      "version": "0.14.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "phf_shared",
+      "version": "0.14.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "pin-project",
+      "version": "1.1.13",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "pin-project-internal",
+      "version": "1.1.13",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "pin-project-lite",
+      "version": "0.2.17",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "pkcs1",
+      "version": "0.7.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "pkcs8",
+      "version": "0.10.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "pkg-config",
+      "version": "0.3.34",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "poly1305",
+      "version": "0.6.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "polyval",
+      "version": "0.7.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "portable-atomic",
+      "version": "1.15.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "portable-atomic-util",
+      "version": "0.2.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "postage",
+      "version": "0.5.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "potential_utf",
+      "version": "0.1.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "powerfmt",
+      "version": "0.2.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ppv-lite86",
+      "version": "0.2.21",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "prettyplease",
+      "version": "0.2.37",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "primeorder",
+      "version": "0.13.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "priority-queue",
+      "version": "2.7.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "proc-macro-crate",
+      "version": "3.5.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "proc-macro-error-attr2",
+      "version": "2.0.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "proc-macro-error2",
+      "version": "2.0.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "prost",
+      "version": "0.14.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "prost-build",
+      "version": "0.14.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "prost-derive",
+      "version": "0.14.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "prost-types",
+      "version": "0.14.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "pwd-grp",
+      "version": "1.0.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "quote",
+      "version": "1.0.47",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "r-efi",
+      "version": "5.3.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "r-efi",
+      "version": "6.0.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "radium",
+      "version": "0.7.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rand",
+      "version": "0.8.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rand",
+      "version": "0.9.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rand",
+      "version": "0.10.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rand_chacha",
+      "version": "0.3.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rand_chacha",
+      "version": "0.9.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rand_chacha",
+      "version": "0.10.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rand_core",
+      "version": "0.6.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rand_core",
+      "version": "0.9.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rand_core",
+      "version": "0.10.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rand_jitter",
+      "version": "0.6.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rangemap",
+      "version": "1.8.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rayon",
+      "version": "1.12.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rayon-core",
+      "version": "1.13.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rdrand",
+      "version": "0.9.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "redox_syscall",
+      "version": "0.5.18",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "redox_users",
+      "version": "0.5.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ref-cast",
+      "version": "1.0.27",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ref-cast-impl",
+      "version": "1.0.27",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "regex",
+      "version": "1.13.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "regex-automata",
+      "version": "0.4.18",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "regex-syntax",
+      "version": "0.8.11",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "reseeding_rng",
+      "version": "0.10.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "retry-error",
+      "version": "0.13.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rfc6979",
+      "version": "0.4.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rsa",
+      "version": "0.9.10",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rusqlite",
+      "version": "0.37.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rustc-hash",
+      "version": "2.1.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rustc_version",
+      "version": "0.4.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rusticata-macros",
+      "version": "4.1.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rustix",
+      "version": "1.1.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "rustversion",
+      "version": "1.0.23",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ryu",
+      "version": "1.0.23",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "safelog",
+      "version": "0.9.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "same-file",
+      "version": "1.0.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "sanitize-filename",
+      "version": "0.6.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "saturating-time",
+      "version": "0.4.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "schannel",
+      "version": "0.1.29",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "schemars",
+      "version": "0.9.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "schemars",
+      "version": "1.2.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "scopeguard",
+      "version": "1.2.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "sec1",
+      "version": "0.7.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "security-framework",
+      "version": "3.7.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "security-framework-sys",
+      "version": "2.17.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "semver",
+      "version": "1.0.28",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "serde",
+      "version": "1.0.229",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "serde-value",
+      "version": "0.7.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "serde_core",
+      "version": "1.0.229",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "serde_derive",
+      "version": "1.0.229",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "serde_ignored",
+      "version": "0.1.14",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "serde_json",
+      "version": "1.0.151",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "serde_path_to_error",
+      "version": "0.1.20",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "serde_spanned",
+      "version": "0.6.9",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "serde_spanned",
+      "version": "1.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "serde_urlencoded",
+      "version": "0.7.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "serde_with",
+      "version": "3.23.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "serde_with_macros",
+      "version": "3.23.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "sha1",
+      "version": "0.10.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "sha1",
+      "version": "0.11.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "sha2",
+      "version": "0.10.9",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "sha2",
+      "version": "0.11.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "sha3",
+      "version": "0.10.9",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "sha3",
+      "version": "0.12.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "sharded-slab",
+      "version": "0.1.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "shellexpand",
+      "version": "3.1.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "shlex",
+      "version": "1.3.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "shlex",
+      "version": "2.0.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "signal-crypto",
+      "version": "0.1.0",
+      "source": "git",
+      "source_url": "git+https://github.com/signalapp/libsignal?tag=v0.102.2#8fc2113bda042fc972a166a24b974b0d34155c6c",
+      "license": null
+    },
+    {
+      "name": "signal-hook-registry",
+      "version": "1.4.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "signature",
+      "version": "2.2.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "simd-adler32",
+      "version": "0.3.10",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "siphasher",
+      "version": "1.0.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "slab",
+      "version": "0.4.12",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "slotmap",
+      "version": "1.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "slotmap-careful",
+      "version": "0.8.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "smallvec",
+      "version": "1.16.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "socket2",
+      "version": "0.6.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "sorted-vec",
+      "version": "0.8.11",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "spin",
+      "version": "0.9.9",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "spki",
+      "version": "0.7.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "sponge-cursor",
+      "version": "0.1.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "spqr",
+      "version": "1.5.3",
+      "source": "git",
+      "source_url": "git+https://github.com/signalapp/SparsePostQuantumRatchet.git?tag=v1.5.3#fd320484dcec89004021e6fdc7481825f5f261fa",
+      "license": null
+    },
+    {
+      "name": "ssh-cipher-fork-arti",
+      "version": "0.2.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ssh-encoding-fork-arti",
+      "version": "0.2.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "ssh-key-fork-arti",
+      "version": "0.6.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "stable_deref_trait",
+      "version": "1.2.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "static_assertions",
+      "version": "1.1.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "strsim",
+      "version": "0.10.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "strsim",
+      "version": "0.11.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "strum",
+      "version": "0.28.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "strum_macros",
+      "version": "0.28.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "subtle",
+      "version": "2.6.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "syn",
+      "version": "1.0.109",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "syn",
+      "version": "2.0.119",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "syn",
+      "version": "3.0.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "sync_wrapper",
+      "version": "1.0.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "synstructure",
+      "version": "0.13.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "sysinfo",
+      "version": "0.38.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tap",
+      "version": "1.0.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tempfile",
+      "version": "3.27.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "thiserror",
+      "version": "1.0.69",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "thiserror",
+      "version": "2.0.20",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "thiserror-impl",
+      "version": "1.0.69",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "thiserror-impl",
+      "version": "2.0.20",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "thread_local",
+      "version": "1.1.10",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "time",
+      "version": "0.3.55",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "time-core",
+      "version": "0.1.9",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "time-macros",
+      "version": "0.2.32",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tinystr",
+      "version": "0.8.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tinyvec",
+      "version": "1.13.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tinyvec_macros",
+      "version": "0.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tokio",
+      "version": "1.53.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tokio-macros",
+      "version": "2.7.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tokio-util",
+      "version": "0.7.19",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "toml",
+      "version": "0.8.23",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "toml",
+      "version": "1.1.6+spec-1.1.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "toml_datetime",
+      "version": "0.6.11",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "toml_datetime",
+      "version": "1.1.1+spec-1.1.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "toml_edit",
+      "version": "0.22.27",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "toml_edit",
+      "version": "0.25.13+spec-1.1.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "toml_parser",
+      "version": "1.1.3+spec-1.1.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "toml_write",
+      "version": "0.1.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "toml_writer",
+      "version": "1.1.2+spec-1.1.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-async-utils",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-basic-utils",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-bytes",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-cell",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-cert",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-chanmgr",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-checkable",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-circmgr",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-config",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-config-path",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-consdiff",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-dirclient",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-dircommon",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-dirmgr",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-error",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-general-addr",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-guardmgr",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-hscrypto",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-key-forge",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-keymgr",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-linkspec",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-llcrypto",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-log-ratelim",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-memquota",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-memquota-cost",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-netdir",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-netdoc",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-persist",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-proto",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-protover",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-relay-selection",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-rtcompat",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-rtmock",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-socksproto",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tor-units",
+      "version": "0.46.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tower",
+      "version": "0.5.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tower-http",
+      "version": "0.5.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tower-layer",
+      "version": "0.3.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tower-service",
+      "version": "0.3.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tracing",
+      "version": "0.1.44",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tracing-attributes",
+      "version": "0.1.31",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tracing-core",
+      "version": "0.1.36",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tracing-log",
+      "version": "0.2.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tracing-subscriber",
+      "version": "0.3.23",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tracing-test",
+      "version": "0.2.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "tracing-test-macro",
+      "version": "0.2.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "typed-index-collections",
+      "version": "3.5.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "typenum",
+      "version": "1.20.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "uncased",
+      "version": "0.9.10",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.24",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "unicode-segmentation",
+      "version": "1.13.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "unicode-xid",
+      "version": "0.2.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "universal-hash",
+      "version": "0.4.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "universal-hash",
+      "version": "0.6.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "unty",
+      "version": "0.0.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "url",
+      "version": "2.5.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "utf8_iter",
+      "version": "1.0.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "uuid",
+      "version": "1.26.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "valuable",
+      "version": "0.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "vcpkg",
+      "version": "0.2.15",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "version_check",
+      "version": "0.9.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "visibility",
+      "version": "0.1.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "void",
+      "version": "1.0.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "walkdir",
+      "version": "2.5.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "wasi",
+      "version": "0.11.1+wasi-snapshot-preview1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "wasip2",
+      "version": "1.0.4+wasi-0.2.12",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "wasix",
+      "version": "0.13.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "wasm-bindgen",
+      "version": "0.2.128",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "wasm-bindgen-macro",
+      "version": "0.2.128",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "wasm-bindgen-macro-support",
+      "version": "0.2.128",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "wasm-bindgen-shared",
+      "version": "0.2.128",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "weak-table",
+      "version": "0.4.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "web-time",
+      "version": "1.1.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "web-time-compat",
+      "version": "0.2.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "winapi",
+      "version": "0.3.9",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "winapi-i686-pc-windows-gnu",
+      "version": "0.4.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "winapi-util",
+      "version": "0.1.11",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "winapi-x86_64-pc-windows-gnu",
+      "version": "0.4.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows",
+      "version": "0.62.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows-collections",
+      "version": "0.3.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows-core",
+      "version": "0.62.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows-future",
+      "version": "0.3.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows-implement",
+      "version": "0.60.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows-interface",
+      "version": "0.59.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows-link",
+      "version": "0.2.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows-numerics",
+      "version": "0.3.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows-result",
+      "version": "0.4.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows-strings",
+      "version": "0.5.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows-sys",
+      "version": "0.59.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows-sys",
+      "version": "0.60.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows-sys",
+      "version": "0.61.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows-targets",
+      "version": "0.52.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows-targets",
+      "version": "0.53.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows-threading",
+      "version": "0.2.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_aarch64_gnullvm",
+      "version": "0.52.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_aarch64_gnullvm",
+      "version": "0.53.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_aarch64_msvc",
+      "version": "0.52.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_aarch64_msvc",
+      "version": "0.53.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_i686_gnu",
+      "version": "0.52.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_i686_gnu",
+      "version": "0.53.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_i686_gnullvm",
+      "version": "0.52.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_i686_gnullvm",
+      "version": "0.53.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_i686_msvc",
+      "version": "0.52.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_i686_msvc",
+      "version": "0.53.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_x86_64_gnu",
+      "version": "0.52.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_x86_64_gnu",
+      "version": "0.53.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_x86_64_gnullvm",
+      "version": "0.52.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_x86_64_gnullvm",
+      "version": "0.53.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_x86_64_msvc",
+      "version": "0.52.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "windows_x86_64_msvc",
+      "version": "0.53.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "winnow",
+      "version": "0.7.15",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "winnow",
+      "version": "1.0.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "wit-bindgen",
+      "version": "0.57.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "writeable",
+      "version": "0.6.4",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "wyz",
+      "version": "0.5.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "x25519-dalek",
+      "version": "2.0.1",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "x25519-dalek",
+      "version": "3.0.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "yoke",
+      "version": "0.8.3",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "yoke-derive",
+      "version": "0.8.2",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "zerocopy",
+      "version": "0.8.56",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "zerocopy-derive",
+      "version": "0.8.56",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "zerofrom",
+      "version": "0.1.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "zerofrom-derive",
+      "version": "0.1.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "zeroize",
+      "version": "1.9.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "zeroize_derive",
+      "version": "1.5.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "zerotrie",
+      "version": "0.2.5",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "zerovec",
+      "version": "0.11.8",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "zerovec-derive",
+      "version": "0.11.6",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "zlib-rs",
+      "version": "0.6.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "zmij",
+      "version": "1.0.23",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "zstd",
+      "version": "0.14.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "zstd-safe",
+      "version": "8.0.0",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    },
+    {
+      "name": "zstd-sys",
+      "version": "2.1.0+zstd.1.5.7",
+      "source": "crates.io",
+      "source_url": "registry+https://github.com/rust-lang/crates.io-index",
+      "license": null
+    }
+  ]
+}

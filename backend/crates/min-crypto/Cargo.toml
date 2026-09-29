@@ -1,0 +1,17 @@
+[package]
+name = "min-crypto"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+# AUDIT MIN-23: убрана мёртвая зависимость libsignal-protocol v0.66.0
+# (не использовалась в коде, но тянула в сборку вторую — до-FS-фиксов — копию
+# криптобиблиотеки). Единственный источник libsignal — min-session (v0.102.2).
+rand_core.workspace = true
+sha2.workspace = true
+hkdf.workspace = true
+hex.workspace = true
+chacha20poly1305.workspace = true
+x25519-dalek.workspace = true
+zeroize.workspace = true

@@ -1,0 +1,85 @@
+# MIN relay — frame API (PROTOCOL §7/§10).
+# Устанавливается как /etc/systemd/system/min-relay.service операционным bootstrap-скриптом.
+#
+# Stateless: состояние только в RAM, на диск не пишется ничего → резкий
+# stop/kill/потеря питания безопасны, graceful shutdown не нужен.
+[Unit]
+Description=MIN relay (frame API, PROTOCOL §7)
+After=network-online.target tor.service
+Wants=network-online.target
+# Внезапные пропадания питания/сети: попытки рестарта не ограничиваем.
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/min-relay --listen 127.0.0.1:3001 --no-http --state-dir /var/lib/min-relay
+# Бета: подробные логи; переопределяется /etc/min-relay/relay.env.
+Environment=RUST_LOG=info
+EnvironmentFile=-/etc/min-relay/relay.env
+# Логи реле — в файл: надёжнее journal (journal однажды «съел» записи старта
+# при ротации), читается tail -f, переживает ребут. При append: в journald
+# остаются только lifecycle-сообщения systemd (start/stop/fail).
+# Ротация: min-relay-logrotate.timer (без logrotate на DietPi).
+# В final-режиме путь тот же, но /var/log снова tmpfs (RAMlog) → логи в RAM.
+# Каталог создаёт tmpfiles.d (min-relay-tmpfiles.conf) НА РАННЕМ ЭТАПЕ ЗАГРУЗКИ,
+# до старта юнита: append: не умеет создавать каталоги, а ExecStartPre не
+# помогает — его собственный stdout уже этот файл (status=209/STDOUT).
+StandardOutput=append:/var/log/min-relay/relay.log
+StandardError=append:/var/log/min-relay/relay.log
+# Внезапные пропадания питания/сети: подниматься всегда.
+Restart=always
+RestartSec=5
+KillSignal=SIGTERM
+TimeoutStopSec=5
+
+# --- Изоляция процесса (реле не доверяет никому, включая хост) ---
+User=minrelay
+DynamicUser=yes
+NoNewPrivileges=yes
+CapabilityBoundingSet=
+AmbientCapabilities=
+StateDirectory=min-relay
+StateDirectoryMode=0700
+ReadWritePaths=/var/lib/min-relay
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+ProtectHostname=yes
+ProtectProc=invisible
+ProcSubset=pid
+RestrictNamespaces=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallErrorNumber=EPERM
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+# Сеть: только loopback. Клиенты (iOS/десктоп) ходят ТОЛЬКО через Tor
+# (.onion), поэтому LAN-доступа к relay нет вообще: провайдер/сосед по
+# Wi-Fi не видят ни адреса, ни трафика relay; клиент ходит через Tor.
+# MVP-подключение по LAN (min.link=tcp-dev-harness) оставлено только на
+# время разработки и требует ручного включения этого правила.
+IPAddressAllow=localhost
+IPAddressDeny=any
+
+# --- Квоты: соседство с другими сервисами на том же Pi (docs §7) ---
+MemoryMax=256M
+MemoryHigh=192M
+CPUQuota=200%
+CPUWeight=100
+IOWeight=50
+
+# --- Бета: не резать поток логов (в final-режиме эти две строки убрать) ---
+LogRateLimitIntervalSec=0
+LogRateLimitBurst=0
+
+[Install]
+WantedBy=multi-user.target

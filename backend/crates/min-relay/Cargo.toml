@@ -1,0 +1,25 @@
+[package]
+name = "min-relay"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[dependencies]
+min-protocol = { path = "../min-protocol" }
+min-wire = { path = "../min-wire" }
+min-net = { path = "../min-net" }
+tokio = { version = "1", features = ["full"] }
+axum = "0.7"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+tracing = "0.1"
+# env-filter: RUST_LOG/--log для бета-развёртывания.
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+bs58 = "0.5"
+blake3.workspace = true
+hex = "0.4"
+rand_core = { workspace = true }
+# AUDIT MIN-06: constant-time сравнение pull_token (уже в дереве через RustCrypto).
+subtle = { version = "2", default-features = false }

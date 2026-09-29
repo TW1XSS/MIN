@@ -1,0 +1,20 @@
+[package]
+name = "min-tor"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[lib]
+name = "min_tor"
+path = "src/lib.rs"
+
+[dependencies]
+min-net = { path = "../min-net" }
+min-delivery = { path = "../min-delivery" }
+arti-client = "0.46"
+futures = "0.3"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "time"] }
+thiserror = "1"
+rand_core = { workspace = true, features = ["getrandom"] }
+tor-rtcompat = "0.46"

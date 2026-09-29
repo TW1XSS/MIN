@@ -1,0 +1,18 @@
+[package]
+name = "min-protocol"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+min-wire = { path = "../min-wire" }
+# MIN-26: единственный источник правды по epoch (EPOCH_INITIAL).
+min-identity = { path = "../min-identity" }
+ciborium.workspace = true
+ed25519-dalek.workspace = true
+bs58.workspace = true
+hex.workspace = true
+blake3.workspace = true
+
+[dev-dependencies]
+arbitrary = { version = "1", features = ["derive"] }

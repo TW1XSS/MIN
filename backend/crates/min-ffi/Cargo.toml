@@ -1,0 +1,40 @@
+[package]
+name = "min-ffi"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[features]
+# Development/test-only feature. Release MinCore.xcframework is built without it;
+# direct TCP is therefore absent from the shipped client and unknown tokens fail closed.
+dev-tcp-link = []
+
+[build-dependencies]
+cc = "1"
+
+[dependencies]
+min-crypto = { path = "../min-crypto" }
+min-identity = { path = "../min-identity" }
+min-protocol = { path = "../min-protocol" }
+min-delivery = { path = "../min-delivery" }
+min-net = { path = "../min-net" }
+min-tor = { path = "../min-tor" }
+min-session = { path = "../min-session" }
+min-storage = { path = "../min-storage" }
+min-recovery = { path = "../min-recovery" }
+min-device = { path = "../min-device" }
+min-app = { path = "../min-app" }
+hex = "0.4"
+ed25519-dalek.workspace = true
+zeroize = { workspace = true }
+rand_core = { workspace = true }
+# Persistence (v6, RT-26.1): MAC-ключ snapshot'а выводится из storage key.
+blake3.workspace = true
+serde_json = "1"
+
+[dev-dependencies]
+min-relay = { path = "../min-relay" }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "time"] }

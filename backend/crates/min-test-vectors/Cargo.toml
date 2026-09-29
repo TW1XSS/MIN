@@ -1,0 +1,16 @@
+[package]
+name = "min-test-vectors"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[dev-dependencies]
+min-wire = { path = "../min-wire" }
+min-protocol = { path = "../min-protocol" }
+min-identity = { path = "../min-identity" }
+ciborium.workspace = true
+hex.workspace = true
+
+[dependencies]
+ed25519-dalek = { version = "2", default-features = false }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Relay rendezvous address (v3 onion). The maintainer's node is
+	     deliberately not part of the public export: set your own. Override
+	     at build time with INFOPLIST_KEY_MinRelayAddress=... or the env var
+	     MIN_RELAY_ADDR=... (see MinApp.relayAddress). An empty value fails
+	     closed by design rather than sending into the void. -->
+	<key>MinRelayAddress</key>
+	<string>$(MIN_RELAY_ADDR)</string>
+</dict>
+</plist>

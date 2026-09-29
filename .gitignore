@@ -1,0 +1,53 @@
+# macOS
+.DS_Store
+*.swp
+*~
+
+# Xcode
+DerivedData/
+build/
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+# Rust / build artifacts (future backend work)
+target/
+*.xframework
+
+# Library crates may keep local locks ignored, but the application workspace
+# must be reproducible and therefore tracks backend/Cargo.lock.
+backend/Cargo.lock
+!backend/Cargo.lock
+backend/crates/*/fuzz/Cargo.lock
+
+# Temp
+/tmp/
+*.log
+# Fuzzing artifacts
+backend/crates/*/fuzz/corpus/
+backend/crates/*/fuzz/artifacts/
+backend/crates/*/fuzz/target/
+backend/crates/*/fuzz/Cargo.lock
+
+# Deploy/test artifacts
+__pycache__/
+*.pyc
+
+# CocoaPods (pod install генерирует; Podfile/Podfile.lock — в git)
+Pods/
+*.xcworkspace
+.shots/
+
+# Generated sanitized public export
+/public-export/
+
+# MIN: локальный адрес relay (содержит production .onion — НЕ в Git)
+scripts/local-relay.env
+*.xcconfig.local
+Local.xcconfig
+.share-check/
+
+# Собранные бинарники ядра: 58 МБ, собираются backend/build-min-core.sh
+MinCore.xcframework/
+backend/MinCore.xcframework/

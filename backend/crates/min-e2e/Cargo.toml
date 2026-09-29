@@ -1,0 +1,12 @@
+[package]
+name = "min-e2e"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[dependencies]
+min-crypto = { path = "../min-crypto" }
+min-relay = { path = "../min-relay" }
+hex.workspace = true
+rand_core.workspace = true

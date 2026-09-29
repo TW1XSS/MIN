@@ -1,0 +1,6 @@
+[Unit]
+Description=MIN relay log rotation
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/min-relay-logrotate.sh

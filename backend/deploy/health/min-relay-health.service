@@ -1,0 +1,9 @@
+[Unit]
+Description=MIN relay health check (beta)
+# Только порядок, БЕЗ Requisite: health-сервис обязан запускаться и тогда,
+# когда min-relay мёртв (иначе теряется весь смысл страховки).
+After=min-relay.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/min-relay-health.sh

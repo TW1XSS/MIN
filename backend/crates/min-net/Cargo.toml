@@ -1,0 +1,17 @@
+[package]
+name = "min-net"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[lib]
+name = "min_net"
+path = "src/lib.rs"
+
+[dependencies]
+min-wire = { path = "../min-wire" }
+rand_core.workspace = true
+thiserror = "1"
+
+[dev-dependencies]

@@ -1,0 +1,23 @@
+#!/bin/bash
+# Просмотр логов реле: ssh pi min-relay-logs [N] | min-relay-logs -f
+# Файл — источник op-логов; journal — lifecycle systemd.
+set -u
+
+LOG="/var/log/min-relay/relay.log"
+case "${1:--n}" in
+  -f|--follow)
+    tail -n 50 -F "$LOG" 2>/dev/null \
+      | sed -u 's/^/LOG /'
+    journalctl -u min-relay -n 0 -f --no-pager 2>/dev/null \
+      | sed -u 's/^/SYS /'
+    ;;
+  *)
+    n="${1:-100}"
+    [ "$1" = "-n" ] && n="${2:-100}"
+    echo "== op-лог ($LOG, последние $n) =="
+    tail -n "$n" "$LOG" 2>/dev/null
+    echo
+    echo "== lifecycle (journal, последние 20) =="
+    journalctl -u min-relay -n 20 --no-pager 2>/dev/null | tail -20
+    ;;
+esac

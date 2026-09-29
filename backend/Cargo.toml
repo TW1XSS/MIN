@@ -1,0 +1,54 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/min-wire",
+    "crates/min-protocol",
+    "crates/min-identity",
+    "crates/min-test-vectors",
+    "crates/min-relay",
+    "crates/min-request",
+    "crates/min-crypto",
+    "crates/min-ffi",
+    "crates/min-e2e",
+    "crates/min-session",
+    "crates/min-net",
+    "crates/min-tor",
+    "crates/min-delivery",
+    "crates/min-storage",
+    "crates/min-recovery",
+    "crates/min-device",
+    "crates/min-app",
+]
+exclude = [
+    "crates/min-protocol/fuzz",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "AGPL-3.0-only"
+
+[workspace.dependencies]
+ciborium = "0.2"
+serde = "1"
+ed25519-dalek = { version = "2", features = ["rand_core"] }
+x25519-dalek = { version = "2", features = ["static_secrets"] }
+rand_core = { version = "0.6", features = ["getrandom"] }
+sha2 = "0.10"
+hkdf = "0.12"
+bs58 = "0.5"
+hex = "0.4"
+chacha20poly1305 = "0.7"
+blake3 = "1"
+zeroize = { version = "1", features = ["derive"] }
+# Signal Protocol (PQXDH + Double Ratchet)
+# AUDIT MIN-16: bump v0.66.0 (2025-02-11) → v0.102.2 (2026-09-10): включает
+# фиксы FS-атак из формального анализа Double Ratchet (eprint 2026/727, IEEE S&P'26).
+libsignal-protocol = { git = "https://github.com/signalapp/libsignal", tag = "v0.102.2" }
+# Storage
+rusqlite = { version = "0.37", features = ["bundled"] }
+argon2 = "0.5"
+
+[profile.release]
+lto = true
+codegen-units = 1

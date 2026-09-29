@@ -1,0 +1,34 @@
+#!/bin/bash
+# Стирает ВСЕ логи реле: файлы + journal-записи (beta-режим).
+# См. политику метаданных логов в операционном runbook.
+#
+# relay.log ОБРЕЗАЕТСЯ (truncate), а не удаляется: systemd держит открытый fd
+# в O_APPEND — после truncate запись продолжается в тот же файл, рестарт юнита
+# не нужен. Ротированные копии (.1..N) не держатся открытыми — удаляются.
+#
+# ВНИМАНИЕ: vacuum в journald глобальный (на выделенном relay-узле это
+# приемлемо и задокументировано) — архивные журналы системы тоже стираются.
+set -u
+
+DIR="/var/log/min-relay"
+purged=0
+
+if [ -d "$DIR" ]; then
+  # Обрезаем текущий лог (fd жив) и удаляем ротированные архивы.
+  if [ -f "$DIR/relay.log" ]; then
+    truncate -s 0 "$DIR/relay.log"
+    purged=$((purged + 1))
+  fi
+  for f in "$DIR"/relay.log.[0-9]; do
+    if [ -f "$f" ]; then
+      rm -f -- "$f"
+      purged=$((purged + 1))
+    fi
+  done
+fi
+
+journalctl --rotate >/dev/null 2>&1 || true
+journalctl --vacuum-time=1s >/dev/null 2>&1 || true
+
+echo "логи реле стёрты: файлов $purged + journal-архив"
+exit 0

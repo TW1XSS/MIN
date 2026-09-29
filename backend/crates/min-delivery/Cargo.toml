@@ -1,0 +1,20 @@
+[package]
+name = "min-delivery"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[lib]
+name = "min_delivery"
+path = "src/lib.rs"
+
+[dependencies]
+min-net = { path = "../min-net" }
+min-protocol = { path = "../min-protocol" }
+rand_core = { workspace = true, features = ["getrandom"] }
+thiserror = "1"
+
+[dev-dependencies]
+min-relay = { path = "../min-relay" }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "time"] }

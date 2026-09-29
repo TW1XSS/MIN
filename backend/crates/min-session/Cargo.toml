@@ -1,0 +1,29 @@
+[package]
+name = "min-session"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[lib]
+name = "min_session"
+path = "src/lib.rs"
+
+[dependencies]
+min-identity = { path = "../min-identity" }
+min-protocol = { path = "../min-protocol" }
+min-wire = { path = "../min-wire" }
+libsignal-protocol = { workspace = true }
+futures-executor = "0.3"
+# AUDIT MIN-16: libsignal 0.102 требует rand_core 0.9 (Rng + CryptoRng).
+rand = "0.9"
+rand_core = { version = "0.9", features = ["os_rng"] }
+hex.workspace = true
+thiserror = "1"
+serde = { workspace = true, features = ["derive"] }
+ciborium.workspace = true
+# Persistence (v6, RT-26.1): keyed MAC snapshot'а + constant-time сравнение тега.
+blake3.workspace = true
+subtle = { version = "2", default-features = false }
+
+[dev-dependencies]

@@ -1,0 +1,11 @@
+[Unit]
+Description=MIN relay log rotation timer
+
+[Timer]
+# Раз в сутки; если файл меньше лимита — скрипт просто выйдет.
+OnCalendar=daily
+RandomizedDelaySec=10min
+Persistent=false
+
+[Install]
+WantedBy=timers.target

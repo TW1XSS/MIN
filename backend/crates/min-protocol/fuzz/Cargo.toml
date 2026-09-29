@@ -1,0 +1,33 @@
+[workspace]
+
+[package]
+name = "min-protocol-fuzz"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+min-protocol = { path = ".." }
+min-wire = { path = "../../min-wire" }
+libfuzzer-sys = "0.4"
+
+[[bin]]
+name = "wire_frame"
+path = "fuzz_targets/wire_frame.rs"
+
+[[bin]]
+name = "frame_request"
+path = "fuzz_targets/frame_request.rs"
+
+[[bin]]
+name = "contact_key"
+path = "fuzz_targets/contact_key.rs"
+
+[[bin]]
+name = "envelope"
+path = "fuzz_targets/envelope.rs"
+[[bin]]
+name = "frame_response"
+path = "fuzz_targets/frame_response.rs"
