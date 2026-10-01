@@ -401,4 +401,19 @@ Full specification versions (Word, source documents, not in this repository):
 - `MIN_Privacy_Permissions_v1.0.docx` - privacy-controls catalogue v1.0
   (MUST/REC/EXT/LIMIT classification, per-chat overrides, High Privacy Mode)
 
+## Support MIN
+
+If you would like to support the development of MIN, you can donate using the following cryptocurrency addresses:
+
+**Bitcoin (BTC)**
+`bc1qv69aqudzxpt9vfdtd9v7lmrwxjv84pt2wzmkva`
+
+**Tether (USDT — TRC20)**
+`TDrks3kR7SoYRnAbAyeZG3Fk8br3cmGJMU`
+
+**Monero (XMR)**
+`88eg3FLdXVoScFFuEzicmnc9ToYEYfbJKT6sKpsVYNhu6bhAyTUhD7nFPZiEZBoA9zQDEHm3AFfLn57A5wF8Tw2fDQAa5vp`
+
+Thank you for supporting the development of MIN.
+
 This README is a structured summary; where they differ, the specification wins.
