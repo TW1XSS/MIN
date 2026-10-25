@@ -248,14 +248,31 @@ Vulnerability reports and the safe-harbor policy are in
 [SECURITY.md](SECURITY.md). Public plans and limitations are in
 [docs/ROADMAP.md](docs/ROADMAP.md).
 
-## Supporting the project
+## Get involved
 
-Public donation addresses will be added by the owner after a separate check.
-Until then, do not send funds to addresses found in third-party sources or in old
-issues: they may be outdated or forged. Project wallets are deliberately not
-listed at this stage - only addresses verified by the owner and recorded in this
-section may be published. A safe support channel and the published addresses will
-appear here once the owner confirms them.
+MIN is an early-stage open-source MVP. We are looking for practical feedback,
+reproducible bug reports, real-device testers, Rust/Swift contributors, and
+independent security reviewers. The project has **not** had an independent
+third-party security audit; please read the threat model and known limitations
+before evaluating its security claims.
+
+- **Test or contribute:** [open the contributor call](https://github.com/TW1XSS/MIN/issues/1).
+- **Build and test:** start with [CONTRIBUTING.md](CONTRIBUTING.md).
+- **Review security:** read [SECURITY.md](SECURITY.md) and [docs/AUDIT_REPORT.md](docs/AUDIT_REPORT.md). Report suspected vulnerabilities through the private process described in SECURITY.md, not in public issues.
+- **Funding and partnerships:** contact the repository owner through GitHub to discuss a grant, sponsorship, or a scoped engineering/security engagement. No investment terms or financial returns are being offered by this README.
+
+### Donations and transparency
+
+The cryptocurrency addresses below are published by the project maintainer. I
+cannot independently verify wallet ownership or control on the maintainer's
+behalf. Before sending any funds, verify the address and network directly with
+the maintainer through a trusted channel. Send only the exact asset on the
+specified network; crypto transfers are generally irreversible.
+
+Donations support development of the open-source project. They are not an
+investment, do not confer ownership, and do not promise a return. For trust,
+the maintainer should publish a periodic summary of funds received and how they
+were spent, without exposing private financial or personal information.
 
 ## What will change in updates
 
@@ -403,7 +420,9 @@ Full specification versions (Word, source documents, not in this repository):
 
 ## Support MIN
 
-If you would like to support the development of MIN, you can donate using the following cryptocurrency addresses:
+If you would like to support the development of MIN, the published donation
+addresses are listed below. Please read the verification and transparency notes
+in [Donations and transparency](#donations-and-transparency) before sending funds.
 
 **Bitcoin (BTC)**
 `bc1qv69aqudzxpt9vfdtd9v7lmrwxjv84pt2wzmkva`
